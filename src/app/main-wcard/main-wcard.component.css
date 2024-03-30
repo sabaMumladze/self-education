@@ -1,0 +1,169 @@
+.big {
+    font-size: 28px;
+}
+
+.middle {
+    font-size: 20px;
+}
+
+.Wth {
+    margin-bottom: 15px;
+}
+
+.bigest {
+    font-size: 40px;
+}
+
+
+
+.card {
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgba(23, 88, 129, 0.452);
+    box-shadow: 0 0 5px rgb(27, 45, 160);
+    display: flex;
+
+    margin-inline: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+
+
+
+}
+
+.Wlocate {
+    display: flex;
+    flex-direction: column;
+}
+
+.celsuse {
+    cursor: pointer;
+}
+
+.celsuse:hover {
+    text-shadow: 0 0 10px;
+}
+
+.timePosition {
+    /* border: 2px solid blue; */
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.dayPosition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.daygeneration {
+    display: flex;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline: 20px;
+    
+}
+
+.timeprognoze {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: -10px;
+    /* border: 2px solid red; */
+
+}
+
+.time {
+    font-size: 22px;
+    margin-bottom: -5px;
+}
+
+.text {
+    font-size: 19px;
+}
+
+.timeButton {
+    width: 200px;
+    height: 35px;
+    padding-top: 6px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(23, 88, 129, 0.452);
+    color: white;
+    box-sizing: 0 0 10px black;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "myFont";
+}
+
+.weatherDashboard {
+    display: grid;
+    grid-template-columns: 300px 340px;
+    gap: 30px;
+    font-size: 22px;
+    margin-top: -70px;
+    font-family: "myFont";
+
+}
+
+.weatherDashboard>span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.weatherDashboard>span>img {
+    width: 40px;
+    height: 40px;
+}
+
+.cels {
+    margin-top: -14px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.cels>img {
+    margin-top: 7px;
+}
+
+.header {
+    position: absolute;
+    top: -24px;
+    left: 300px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    background-color: rgba(62, 198, 196, 0.737);
+    color: white;
+    font-size: 22px;
+    padding-top: 9px;
+}
+
+.day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 2px solid red;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}

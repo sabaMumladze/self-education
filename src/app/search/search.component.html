@@ -1,0 +1,7 @@
+<form [formGroup]="form">
+    <label for="localname"></label>
+    <div class="serchposition" >
+        <input type="text" name="localname" formControlName="locName" placeholder="რომელი ქალაქის ამინდი გაინტერესებთ...">
+        <img class="serchIcon" (click)="onSubmit()" src="./../../assets/icon/icons8-search-64.png" alt="search.icon">
+    </div>
+</form>

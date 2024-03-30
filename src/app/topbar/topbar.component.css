@@ -1,0 +1,19 @@
+.topbar {
+    background-color: rgba(41, 89, 136, 0.397);
+    box-shadow: 0 0 10px solid black;
+    padding: 10px 15px;
+    display: flex;
+    gap: 15px;
+    height: 80px;
+
+}
+
+.topbar>img {
+    width: 60px;
+    cursor: pointer;
+}
+.isActive {
+   border-bottom: 4px solid white;
+   transition: 0.3s;
+   filter: drop-shadow(0 4px 8px rgb(255, 255, 255));
+}

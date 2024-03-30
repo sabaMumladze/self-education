@@ -1,0 +1,67 @@
+<div style="position: relative;margin-top: 50px;">
+    <div class="header">
+        <marquee behavior="" direction="">{{ labelGeo }}</marquee>
+    </div>
+
+    <div class="card">
+        <span class="middle">{{ location }}</span>
+        <img style="width: 70px;height: 70px; margin-right: 20px;" src="{{ Img }}" alt="">
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+            <div class="Wlocate">
+                <span class="big Wth">{{ WeatherStyle }}</span>
+                <span class="bigest cels">{{ celtype }}<img src="./../../assets/icon/celsius (1).png" alt="*C"></span>
+
+            </div>
+
+            <div class="weatherDashboard">
+                <span><img src="./../../assets/dashboardIcon/temperature.png" alt="icon">მაქს.ტემპერატურა: {{ maxTemp
+                    }}'c</span>
+                <span><img src="./../../assets/dashboardIcon/wind.png" alt="icon">ქარის სიჩქარე: {{ windeSpeed
+                    }}კმ/სთ</span>
+                <span><img src="./../../assets/dashboardIcon/cold.png" alt="icon">მინ.ტემპერატურა: {{ minTemp
+                    }}'c</span>
+                <span><img src="./../../assets/dashboardIcon/water-drops.png" alt="icon">წვიმის შანსი: {{
+                    rainChance}}%</span>
+                <span><img src="./../../assets/dashboardIcon/snowflake.png" alt="icon">თოვლის შანსი: {{snowChance
+                    }}%</span>
+                <span class="celsuse" (click)="changecels()"><img src="./../../assets/dashboardIcon/celsius.png"
+                        alt="icon">მიმდინარე ტემპ.ც/ფ: {{ celsOrFaren }}*{{ cf }}</span>
+            </div>
+        </div>
+        <div class="buttons">
+
+            <p-button (click)="seeMoreHors()" label="{{ SeeMoreHors }}"></p-button>
+            <button pButton (click)="seeMoreDays()" type="button" label="{{ SeeMoreDays }}"></button>
+
+
+            <select name="dasy" id="days" type="text" (change)="days($event)">
+                <option *ngFor="let i of Array" value="{{i}}">{{i}}</option>
+            </select>
+        </div>
+        <div [hidden]="ActiveAllDay">
+            <div class="daygeneration">
+                <div class="dayPosition" *ngFor="let day of forcastday">
+
+                    <span>{{ day.date}}</span>
+                    <img src="{{ day.day.condition.icon }}" alt="">
+                    <span>{{ day.day.condition.text }}</span>
+                    <span>{{ day.day.avgtemp_c}}c</span>
+                </div>
+            </div>
+        </div>
+        <div [hidden]="ActiveAllTime">
+            <div class="timePosition">
+                <div *ngFor="let prog of prognozArray; let i = index">
+                    <div class="timeprognoze">
+                        <span class="time">{{ i }}:00 სთ</span>
+                        <img src="{{ prog.condition.icon }}" alt="">
+                        <span class="text">{{ prog.condition.text }}</span>
+                        <span>{{ prog.temp_c }}*C</span>
+                        <span></span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
